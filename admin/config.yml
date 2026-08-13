@@ -3,6 +3,7 @@ backend:
   repo: guyi2298/leishen
   branch: main
   auth_type: oauth
+  site_url: "https://guyi2298.github.io/leishen/"
 
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
@@ -36,12 +37,14 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-      - file: "content/about/_index.md"
+      - name: "about"
+        file: "content/about/_index.md"
         label: "About Page"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
-      - file: "content/contact/_index.md"
+      - name: "contact"
+        file: "content/contact/_index.md"
         label: "Contact Page"
         fields:
           - { label: "Title", name: "title", widget: "string" }
