@@ -4,6 +4,8 @@ backend:
   branch: main
   auth_type: oauth
   site_url: "https://guyi2298.github.io/leishen/"
+  base_url: "https://decap-cms-oauth.netlify.app"
+  auth_endpoint: "auth"
 
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
