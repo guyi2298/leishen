@@ -2,11 +2,8 @@ backend:
   name: github
   repo: guyi2298/leishen
   branch: main
-  auth_type: oauth
+  auth_type: token
   site_url: "https://guyi2298.github.io/leishen/"
-  # 使用 Decap 官方维护的 OAuth 代理（当前可用）
-  base_url: "https://decap-cms-oauth.netlify.app"
-  auth_endpoint: "auth"
 
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
