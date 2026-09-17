@@ -1,0 +1,87 @@
+backend:
+  name: github
+  repo: guyi2298/leishen
+  branch: main
+  auth_type: token
+  base_url: /leishen
+
+media_folder: static/images/uploads
+public_folder: /leishen/images/uploads
+
+i18n:
+  structure: multiple_folders
+  locales: [en, zh, vi, id, th, ms]
+  default_locale: en
+
+collections:
+  - name: home
+    label: Home
+    folder: content
+    path: "{{locale}}"
+    i18n: true
+    create: false
+    delete: false
+    slug: _index
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Description, name: description, widget: string }
+      - { label: Body, name: body, widget: markdown }
+
+  - name: products
+    label: Products
+    folder: content
+    path: "{{locale}}/products/{{slug}}"
+    i18n: true
+    create: true
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Description, name: description, widget: string }
+      - { label: Image, name: image, widget: image, required: false }
+      - { label: Body, name: body, widget: markdown }
+
+  - name: cases
+    label: Cases
+    folder: content
+    path: "{{locale}}/cases/{{slug}}"
+    i18n: true
+    create: true
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Description, name: description, widget: string }
+      - { label: Body, name: body, widget: markdown }
+
+  - name: about
+    label: About
+    folder: content
+    path: "{{locale}}/about"
+    i18n: true
+    create: false
+    delete: false
+    slug: _index
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Body, name: body, widget: markdown }
+
+  - name: contact
+    label: Contact
+    folder: content
+    path: "{{locale}}/contact"
+    i18n: true
+    create: false
+    delete: false
+    slug: _index
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Body, name: body, widget: markdown }
+
+  - name: posts
+    label: Posts
+    folder: content
+    path: "{{locale}}/posts/{{slug}}"
+    i18n: true
+    create: true
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Date, name: date, widget: datetime }
+      - { label: Description, name: description, widget: string }
+      - { label: Body, name: body, widget: markdown }
