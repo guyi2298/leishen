@@ -16,11 +16,10 @@ collections:
   - name: home
     label: Home
     folder: content
-    path: "{{locale}}"
-    slug: _index
     i18n: true
     create: false
     delete: false
+    slug: _index
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Description, name: description, widget: string }
@@ -29,7 +28,6 @@ collections:
   - name: products
     label: Products
     folder: content
-    path: "{{locale}}/products/{{slug}}"
     i18n: true
     create: true
     fields:
@@ -41,7 +39,6 @@ collections:
   - name: cases
     label: Cases
     folder: content
-    path: "{{locale}}/cases/{{slug}}"
     i18n: true
     create: true
     fields:
@@ -52,11 +49,10 @@ collections:
   - name: about
     label: About
     folder: content
-    path: "{{locale}}/about"
-    slug: _index
     i18n: true
     create: false
     delete: false
+    slug: _index
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Body, name: body, widget: markdown }
@@ -64,11 +60,10 @@ collections:
   - name: contact
     label: Contact
     folder: content
-    path: "{{locale}}/contact"
-    slug: _index
     i18n: true
     create: false
     delete: false
+    slug: _index
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Body, name: body, widget: markdown }
@@ -76,7 +71,6 @@ collections:
   - name: posts
     label: Posts
     folder: content
-    path: "{{locale}}/posts/{{slug}}"
     i18n: true
     create: true
     fields:
