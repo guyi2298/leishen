@@ -2,7 +2,6 @@ backend:
   name: github
   repo: guyi2298/leishen
   branch: main
-  auth_type: token
   base_url: /leishen
 
 media_folder: static/images/uploads
@@ -18,10 +17,10 @@ collections:
     label: Home
     folder: content
     path: "{{locale}}"
+    slug: _index
     i18n: true
     create: false
     delete: false
-    slug: _index
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Description, name: description, widget: string }
@@ -54,10 +53,10 @@ collections:
     label: About
     folder: content
     path: "{{locale}}/about"
+    slug: _index
     i18n: true
     create: false
     delete: false
-    slug: _index
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Body, name: body, widget: markdown }
@@ -66,10 +65,10 @@ collections:
     label: Contact
     folder: content
     path: "{{locale}}/contact"
+    slug: _index
     i18n: true
     create: false
     delete: false
-    slug: _index
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Body, name: body, widget: markdown }
